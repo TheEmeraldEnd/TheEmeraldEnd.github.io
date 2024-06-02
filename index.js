@@ -89,7 +89,7 @@
             string: 'Ghost',
             weaknesses: ['Ghost', 'Dark'],
             resistances: ['Poison', 'Bug'],
-            immune: ['Normal', 'Dark']
+            immune: ['Normal', 'Fighting']
         },
         Dragon: {
             string: 'Dragon',
