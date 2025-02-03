@@ -11,7 +11,7 @@ Used for titles (recommended in use with h1 element
 Used for list elements for the recipes
 */
 .recipeElement {
-    
+    width:50%;
 }
 
 body {
