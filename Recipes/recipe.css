@@ -1,0 +1,21 @@
+/*
+Used for titles (recommended in use with h1 element)
+*/
+.title {
+    text-align:center;
+    background-color:green;
+    border-radius:10px;
+}
+
+/*
+Used for subtitles (recommended in use with the h2 element)
+*/
+.subtitle{
+    text-align:center;
+    background-color:chartreuse;
+    border-radius: 20px;
+}
+
+body {
+    background-color:black;
+}

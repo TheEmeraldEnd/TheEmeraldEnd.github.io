@@ -1,8 +1,8 @@
 let recipeElementButtonBase = document.getElementById('recipeElementBase');
 let recipeElementList = document.getElementById('recipeElementList');
 
-function LoadWindow(){
-    window.location='Recipes/recipe.html';
+function LoadWindow(incomingRecipeTitleString){
+    window.location=`Recipes/recipe.html?recipeTitle=${incomingRecipeTitleString}`;
 }
 
 //list of recipes inside of the recipe's list (must be added in manually)
@@ -15,7 +15,7 @@ let recipeFolders = [
 for(let i = 0; i < recipeFolders.length; i++){
     let newRecipeElement = recipeElementButtonBase.cloneNode(true);
     newRecipeElement.children[0].textContent = `${recipeFolders[i]}`;
-    newRecipeElement.children[0].onclick = function() {LoadWindow();};
+    newRecipeElement.children[0].onclick = function() {LoadWindow(recipeFolders[i]);};
     recipeElementList.appendChild(newRecipeElement);
 }
 recipeElementButtonBase.remove();
