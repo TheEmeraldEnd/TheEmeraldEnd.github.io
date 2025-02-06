@@ -2,7 +2,7 @@ let recipeElementButtonBase = document.getElementById('recipeElementBase');
 let recipeElementList = document.getElementById('recipeElementList');
 
 function LoadWindow(incomingRecipeTitleString){
-    window.location=`Recipes/recipe.html?recipeTitle=${incomingRecipeTitleString}`;
+    window.location=`Recipes/${incomingRecipeTitleString}/recipe.html`;
 }
 
 //list of recipes inside of the recipe's list (must be added in manually)

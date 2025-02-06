@@ -19,3 +19,12 @@ Used for subtitles (recommended in use with the h2 element)
 body {
     background-color:black;
 }
+
+p{
+    color:white;
+}
+
+img{
+    max-width: 100%;
+    max-height: 500px;
+}
