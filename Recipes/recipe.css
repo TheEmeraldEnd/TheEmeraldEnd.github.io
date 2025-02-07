@@ -24,7 +24,17 @@ p{
     color:white;
 }
 
-img{
+.recipeStepElement{
+    border:10px solid white;
+    text-align: center;
+}
+
+.recipeStepElementPicture{
     max-width: 100%;
     max-height: 500px;
 }
+
+.recipeStepElementText{
+    color:white;
+}
+
