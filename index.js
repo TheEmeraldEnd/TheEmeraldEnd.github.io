@@ -7,9 +7,10 @@ function LoadWindow(incomingRecipeTitleString){
 
 //list of recipes inside of the recipe's list (must be added in manually)
 let recipeFolders = [
-    'Carbonara (Eggless)',
-    'Eggs In a Basket Sandwiches'
+    'Eggs In a Basket Sandwiches',
+    'Carbonara (Eggless)'
 ];
+recipeFolders.sort();
 
 //format the list (doesn't set the list when clicked yet)
 for(let i = 0; i < recipeFolders.length; i++){
@@ -19,3 +20,23 @@ for(let i = 0; i < recipeFolders.length; i++){
     recipeElementList.appendChild(newRecipeElement);
 }
 recipeElementButtonBase.remove();
+
+//Set the recipes while typing
+let recipeButtons = document.getElementsByClassName('recipeElement')
+
+function LoadEnteredInput(incomingText){
+    for(let i = 0; i < recipeButtons.length; i++){
+        var recipeTitle = recipeButtons[i].textContent;
+
+        if (recipeTitle.toUpperCase().includes(incomingText.toUpperCase())){
+            recipeButtons[i].parentElement.style.display = 'inline';
+        }
+        else{
+            recipeButtons[i].parentElement.style.display = 'none';
+        }
+    }
+}
+let inputText = document.getElementById('recipeSearchBar');
+inputText.addEventListener('input', function(evt) {
+    LoadEnteredInput(this.value)
+});
