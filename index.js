@@ -8,7 +8,9 @@ function LoadWindow(incomingRecipeTitleString){
 //list of recipes inside of the recipe's list (must be added in manually)
 let recipeFolders = [
     'Eggs In a Basket Sandwiches',
-    'Carbonara (Eggless)'
+    'Carbonara (Eggless)',
+    'Omlette',
+    'Honey Milk'
 ];
 recipeFolders.sort();
 
