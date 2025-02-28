@@ -1,8 +1,14 @@
 let recipeElementButtonBase = document.getElementById('recipeElementBase');
 let recipeElementList = document.getElementById('recipeElementList');
 
+//Defign functions
 function LoadWindow(incomingRecipeTitleString){
     window.location=`Recipes/${incomingRecipeTitleString}/recipe.html`;
+}
+
+function SetFinishedResult(incomingRecipeTitleString){
+    let finishedProduct = `Recipes/${incomingRecipeTitleString}/Finished.jpg`
+    return finishedProduct;
 }
 
 //list of recipes inside of the recipe's list (must be added in manually)
@@ -10,7 +16,8 @@ let recipeFolders = [
     'Eggs In a Basket Sandwiches',
     'Carbonara (Eggless)',
     'Omlette',
-    'Honey Milk'
+    'Honey Milk',
+    'Salmon'
 ];
 recipeFolders.sort();
 
@@ -19,6 +26,7 @@ for(let i = 0; i < recipeFolders.length; i++){
     let newRecipeElement = recipeElementButtonBase.cloneNode(true);
     newRecipeElement.children[0].textContent = `${recipeFolders[i]}`;
     newRecipeElement.children[0].onclick = function() {LoadWindow(recipeFolders[i]);};
+    newRecipeElement.children[1].src = SetFinishedResult(recipeFolders[i]);
     recipeElementList.appendChild(newRecipeElement);
 }
 recipeElementButtonBase.remove();

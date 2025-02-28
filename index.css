@@ -11,7 +11,11 @@ Used for titles (recommended in use with h1 element
 Used for list elements for the recipes
 */
 .recipeElement {
-    width:50%;
+    width:100%;
+}
+
+.finishedProductImage{
+    max-height: 100px;
 }
 
 body {
