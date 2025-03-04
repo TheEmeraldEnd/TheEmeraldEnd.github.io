@@ -15,7 +15,13 @@ Used for list elements for the recipes
 }
 
 .finishedProductImage{
-    max-height: 100px;
+    max-height: 150px;
+    float: left;
+}
+
+.recipeDescription{
+    color:white;
+    float: left;
 }
 
 body {
