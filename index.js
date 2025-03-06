@@ -19,11 +19,13 @@ function SetFinishedResult(incomingRecipeTitleString){
 //parentElement should be an element
 //returns the child element
 function SearchThroughDescendants(childClassTag, parentElement){
+    let childObject = null;
     for(let i = 0; i < parentElement.children.length; i++){
-        let child = parentElement.children[i]
-        if (child.classname === childClassTag)
-            return child; 
+        let childElement = parentElement.children[i]
+        if (childElement.getAttribute("class") === childClassTag)
+            childObject = childElement; 
     }
+    return childObject
 }
 
 //list of recipes inside of the recipe's list (must be added in manually)
@@ -39,9 +41,9 @@ recipeFolders.sort();
 //format the list (doesn't set the list when clicked yet)
 for(let i = 0; i < recipeFolders.length; i++){
     let newRecipeElement = recipeElementButtonBase.cloneNode(true);
-    SearchThroughDescendants(recipeButtonTag).textContent = `${recipeFolders[i]}`;
-    SearchThroughDescendants(recipeButtonTag).onclick = function() {LoadWindow(recipeFolders[i]);};
-    SearchThroughDescendants(recipeImageTag).src = SetFinishedResult(recipeFolders[i]);
+    SearchThroughDescendants(recipeButtonTag, newRecipeElement).textContent = `${recipeFolders[i]}`;
+    SearchThroughDescendants(recipeButtonTag, newRecipeElement).onclick = function() {LoadWindow(recipeFolders[i]);};
+    SearchThroughDescendants(recipeImageTag, newRecipeElement).src = SetFinishedResult(recipeFolders[i]);
     recipeElementList.appendChild(newRecipeElement);
 }
 recipeElementButtonBase.remove();
