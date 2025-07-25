@@ -34,7 +34,8 @@ let recipeFolders = [
     'Carbonara (Eggless)',
     'Omlette',
     'Honey Milk',
-    'Salmon'
+    'Salmon',
+    'French Toast'
 ];
 recipeFolders.sort();
 
