@@ -2,8 +2,34 @@ body{
     background-color:black;
 }
 
+:root{
+    --NavbarHeight : 50px;
+}
+
 #NavBar{
-    height:30%;
-    background-color:yellow;
+    height:var(--NavbarHeight);
+    background-color:blue;
     margin:0px 0px 0px 0px;
+    width:100%;
+    
+}
+
+.FillButton{
+    height: 100%;
+    width: var(--NavbarHeight);
+    
+}
+
+.FillHeight{
+    height:100%;
+}
+
+.PortfolioTitle{
+    display:inline-block;
+    font-size:var(--NavbarHeight);
+}
+
+.FillArea{
+    height:100%;
+    width:100%;
 }
