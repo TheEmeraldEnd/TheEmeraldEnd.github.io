@@ -2,26 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="IndexProjectDisplay.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+
     <script defer type="text/javascript" src="index.js"></script>
+    <script defer type="text/javascript" src="ProjectLibrary.js"></script>
+
 </head>
 <body>
-    <div id="NavBar">
-        <button class="FillButton" title="To Profile Page">
-            <img src="ProfileTestImage.png"  class="FillArea">
+    <div id="NavBar" class="NavBarFlexContainer">
+        <button class="FillButton NavBarItemLeft" title="To Profile Page">
+            <img src="IndexImages/ProfileTestImage.png"  class="FillArea">
         </button>
 
-        <button class="FillButton" title="To Home Page">
-            <img src="HouseImage.png"  class="FillArea">
+        <button class="FillButton NavBarItemLeft" title="To Home Page">
+            <img src="IndexImages/HouseImage.png"  class="FillArea">
         </button>
 
-        <strong class="FillHeight PortfolioTitle">Sage's Portfolio</strong>
+        <strong class="FillHeight PortfolioTitle NavBarItemCenter ">Sage's Portfolio</strong>
 
-        <button class="FillButton" title="Search For Projects">
-            <img src="SearchForImage.png"  class="FillArea">
+        <button class="FillButton NavBarItemRight" title="Search For Projects">
+            <img src="IndexImages/SearchForImage.png"  class="FillArea">
         </button>
+    </div>
+
+    <!--Project List List-->
+    <div class="">
+
+        <!--Project Catagory-->
+        <p class="ProjectCatagoryNameDisplay">
+            Project Catagory
+        </p>
+
+        <!--Project Catagory List-->
+        <div class="ProjectListFlexRowContainer ProjectCatagoryListDisplay">
+
+            <!--Project Element-->
+            <!--Might need to add divs to autofill with margins instead of using border-->
+            <div class="ProjectFlexColumnContainer ProjectListFlexRowItem">
+                <img src="IndexImages/Default/DefaultProjectImage.png" class="ProjectImage ProjectFlexColumnItemElement">
+                <p class="ProjectFlexColumnItemElement ProjectTitleElement">
+                    Project Title
+                </p>
+                <p class="ProjectFlexColumnItemElement ProjectSummaryElement">
+                    Project Summary Of Stuff
+                </p>
+            </div>
+
+            <!--Project Element-->
+            <div class="ProjectFlexColumnContainer ProjectListFlexRowItem">
+                <img src="IndexImages/Default/DefaultProjectImage.png" class="ProjectImage ProjectFlexColumnItemElement">
+                <p class="ProjectFlexColumnItemElement">
+                    Project Title
+                </p>
+                <p class="ProjectFlexColumnItemElement">
+                    Project Summary Of Stuff
+                </p>
+            </div>
+
+            <!--Project Element-->
+            <div class="ProjectFlexColumnContainer ProjectListFlexRowItem">
+                <img src="IndexImages/Default/DefaultProjectImage.png" class="ProjectImage ProjectFlexColumnItemElement">
+                <p class="ProjectFlexColumnItemElement">
+                    Project Title
+                </p>
+                <p class="ProjectFlexColumnItemElement">
+                    Project Summary Of Stuff
+                </p>
+            </div>
+
+            <!--To Catagory Search-->
+            <button>
+                <img src="IndexImages/SearchForImage.png" title="To Catagory Search">
+            </button>
+        </div>
+
     </div>
 </body>
 </html>
