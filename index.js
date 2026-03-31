@@ -1,5 +1,5 @@
 
-window.location.href = "Static Website Projects/Recipe Project/index.html";
+//window.location.href = "Static Website Projects/Recipe Project/index.html";
 
 let projectListListID = "ProjectListListID";
 
@@ -86,8 +86,33 @@ class ProjectCreationFunctions{
 
 }
 
-let tempProjectList = [
-    ProjectCreationFunctions.MakeProjectDisplay('Test title', 'Some summary', '', 'https://github.com/TheEmeraldEnd/LegoTestSite')
-];
+let uniqueCatagories = ProjectLibraryCollection.GetUniqueCatagories();
 
-projectListListElement.innerHTML += ProjectCreationFunctions.MakeProjectCatagoryDisplay("Test Catagory", tempProjectList, "Temp Link");
+for(let i = 0; i < uniqueCatagories.length; i++){
+    let projectsInCatagory = ProjectLibraryCollection.GetProjectsOfCatagory(uniqueCatagories[i]);
+    console.log(uniqueCatagories[i])
+    let tempProjectElementList = [];
+    for(let j = 0; j < projectsInCatagory.length; j++){
+        let tempProject = ProjectLibraryCollection.GetProjectDetails(projectsInCatagory[j]);
+        if (tempProject.Name() == ""){
+        }
+        else{
+            tempProjectElementList.push(
+            ProjectCreationFunctions.MakeProjectDisplay(
+                tempProject.Name(),
+                tempProject.Summary(),
+                tempProject.ImageLink(),
+                tempProject.Link()
+            )
+        );
+        }
+        
+    }
+
+    projectListListElement.innerHTML += 
+        ProjectCreationFunctions.MakeProjectCatagoryDisplay(
+            uniqueCatagories[i], tempProjectElementList, "");
+}
+
+
+

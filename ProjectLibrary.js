@@ -8,12 +8,85 @@ class ProjectItem{
         this.imageLink = imageLink;
         this.status = status;
     }
+
+    Name(){
+        return this.name;
+    }
+
+    Catagory(){
+        return this.catagory;
+    }
+
+    Description(){
+        return this.description;
+    }
+
+    Summary(){
+        return this.summary;
+    }
+
+    Link(){
+        return this.link;
+    }
+
+    ImageLink(){
+        return this.imageLink;
+    }
+
+    Status(){
+        return this.status;
+    }
+
+
 }
 
-var ProjectLibrary = [];
-function AddProjectItem(incomingProjectItem){
-    ProjectLibrary.push(incomingProjectItem);
+class ProjectLibraryCollection{
+    static ProjectLibrary = [];
+
+    static AddProjectItem(incomingProjectItem){
+        ProjectLibraryCollection.ProjectLibrary.push(incomingProjectItem);
+    }
+
+    static GetUniqueCatagories(){
+        let listOfUniqueCatagories = [];
+
+        for(let i = 0; i < ProjectLibraryCollection.ProjectLibrary.length; i++){
+            let tempProjectCatagory = ProjectLibraryCollection.ProjectLibrary[i].Catagory();
+            if (!listOfUniqueCatagories.includes(tempProjectCatagory))
+                listOfUniqueCatagories.push(tempProjectCatagory);
+        }
+
+        return listOfUniqueCatagories;
+    }
+
+    static GetProjectsOfCatagory(incomingCatagory = ""){
+        let listOfProjects = [];
+
+        for(let i = 0; i < ProjectLibraryCollection.ProjectLibrary.length; i++){
+            let tempProjectCatagory = ProjectLibraryCollection.ProjectLibrary[i].Catagory();
+            let tempProjectName = ProjectLibraryCollection.ProjectLibrary[i].Name();
+            if (incomingCatagory === tempProjectCatagory && tempProjectName !== ""){
+                listOfProjects.push(tempProjectName);
+            }
+            
+        }
+
+        return listOfProjects;
+    }
+
+    static GetProjectDetails(incomingProjectName = ""){
+        let tempProject = new ProjectItem("", "", "", "", "", "", "");
+
+        for(let i = 0; i < ProjectLibraryCollection.ProjectLibrary.length; i++){
+            if (incomingProjectName === ProjectLibraryCollection.ProjectLibrary[i].Name()){
+                return ProjectLibraryCollection.ProjectLibrary[i];
+            }
+        }
+        return tempProject;
+    }
 }
+
+
 
 //Game Catagory
 var tempName = "Game-Selector";
@@ -32,7 +105,7 @@ var tempProjectItem = new ProjectItem(
     tempImageLink,
     tempStatus
 );
-AddProjectItem(tempProjectItem);
+ProjectLibraryCollection.AddProjectItem(tempProjectItem);
 
 var tempName = "Battle-Scene";
 var tempCatagory = "Game";
@@ -50,7 +123,7 @@ var tempProjectItem = new ProjectItem(
     tempImageLink,
     tempStatus
 );
-AddProjectItem(tempProjectItem);
+ProjectLibraryCollection.AddProjectItem(tempProjectItem);
 
 var tempName = "Platformer-Project";
 var tempCatagory = "Game";
@@ -68,7 +141,7 @@ var tempProjectItem = new ProjectItem(
     tempImageLink,
     tempStatus
 );
-AddProjectItem(tempProjectItem);
+ProjectLibraryCollection.AddProjectItem(tempProjectItem);
 
 //AI Catagory
 var tempName = "Wizrobe101Bot";
@@ -87,7 +160,7 @@ var tempProjectItem = new ProjectItem(
     tempImageLink,
     tempStatus
 );
-AddProjectItem(tempProjectItem);
+ProjectLibraryCollection.AddProjectItem(tempProjectItem);
 
 //ASP.NET Catagory
 var tempName = "LegoTestSite";
@@ -107,7 +180,7 @@ var tempProjectItem = new ProjectItem(
     tempImageLink,
     tempStatus
 );
-AddProjectItem(tempProjectItem);
+ProjectLibraryCollection.AddProjectItem(tempProjectItem);
 
 var tempName = "Lego Site Client Access";
 var tempCatagory = "ASP.NET";
@@ -125,7 +198,7 @@ var tempProjectItem = new ProjectItem(
     tempImageLink,
     tempStatus
 );
-AddProjectItem(tempProjectItem);
+ProjectLibraryCollection.AddProjectItem(tempProjectItem);
 
 //Static website Category
 var tempName = "PokemonDualTypeCalculator";
@@ -145,7 +218,7 @@ var tempProjectItem = new ProjectItem(
     tempImageLink,
     tempStatus
 );
-AddProjectItem(tempProjectItem);
+ProjectLibraryCollection.AddProjectItem(tempProjectItem);
 
 var tempName = "RecipeProject";
 var tempCatagory = "Static Website";
@@ -164,4 +237,4 @@ var tempProjectItem = new ProjectItem(
     tempImageLink,
     tempStatus
 );
-AddProjectItem(tempProjectItem);
+ProjectLibraryCollection.AddProjectItem(tempProjectItem);
