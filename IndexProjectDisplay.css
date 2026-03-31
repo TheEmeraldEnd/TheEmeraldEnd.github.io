@@ -1,3 +1,9 @@
+:root{
+    --image-display-height:50px;
+    --project-display-total-width: 160px;
+    --image-border-color:blue;
+}
+
 /*Project display flex specifications*/
 .ProjectListFlexRowContainer{
     display:flex;
@@ -11,8 +17,6 @@
 .ProjectFlexColumnContainer{
     display:flex;
     flex-direction:column;
-    width:fit-content;
-    align-items:baseline;
 }
 
 .ProjectFlexColumnItemElement{
@@ -20,22 +24,37 @@
 }
 
 /*Project display specific elements*/
-.ProjectImageWrapper{
-    background-color:magenta;
+.ProjectImageWrapperLeft{
     margin-left:auto;
     margin-right:auto;
-    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    flex-grow:2;
+    height:var(--image-display-height);
+    background-color:var(--image-border-color);
+    border:0px transparent magenta;
+    border-top-left-radius:5px;
+}
+
+.ProjectImageWrapperRight{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:0px;
+    margin-bottom:0px;
+    flex-grow:2;
+    height:var(--image-display-height);
+    background-color:var(--image-border-color);
+    border:0px transparent magenta;
+    border-top-right-radius:5px;
+}
+
+.ProjectImageWrapper{
+    width:100%
 }
 
 .ProjectImage{
-    --image-size:50px;
-    height:var(--image-size);
-    border: 60px solid magenta;
-    border-top-width:0px;
-    border-bottom-width:0px;
-    border-top-left-radius:5px;
-    border-top-right-radius:5px;
-
+    height:var(--image-display-height);
+    aspect-ratio:1;
 }
 
 .ProjectSummaryElement{
@@ -43,13 +62,14 @@
 }
 
 .ProjectTitleElement{
-    max-width:100%
+    max-width:100%;
+    align-items:center;
 }
 
 .ProjectCatagoryNameDisplay{
     background-color:lightblue;
     color:black;
-    width:10vw;
+    width:var(--project-display-total-width);
     border-top-left-radius:5px;
     border-top-right-radius:5px;
     margin-bottom:0px;

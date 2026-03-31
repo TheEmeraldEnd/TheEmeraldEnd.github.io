@@ -31,8 +31,8 @@
         </button>
     </div>
 
-    <!--Project List List-->
-    <div class="">
+    <!--Project Category List-->
+    <div class="" id="ProjectListListID">
 
         <!--Project Catagory-->
         <p class="ProjectCatagoryNameDisplay">
@@ -43,45 +43,40 @@
         <div class="ProjectListFlexRowContainer ProjectCatagoryListDisplay">
 
             <!--Project Element-->
-            <!--Might need to add divs to autofill with margins instead of using border-->
-            <div class="ProjectFlexColumnContainer ProjectListFlexRowItem">
-                <img src="IndexImages/Default/DefaultProjectImage.png" class="ProjectImage ProjectFlexColumnItemElement">
+            <!--Links ot the project summary page-->
+            <a class="ProjectFlexColumnContainer ProjectListFlexRowItem ProjectDisplayWrapper" href="Static Website Projects/Recipe Project/index.html"
+                title="Go To {Project Title}">
+                <!--Image Wrapper-->
+                <div class="ProjectFlexColumnItemElement ProjectImageWrapper ProjectListFlexRowContainer">
+                    <div class="ProjectListFlexRowItem ProjectImageWrapperLeft"></div>
+                    <img src="ProjectLibraryImages/LegoTestSite.png" class="ProjectImage ProjectListFlexRowItem">
+                    <div class="ProjectListFlexRowItem ProjectImageWrapperRight"></div>
+                </div>
+                
+                <!--Project Title-->
                 <p class="ProjectFlexColumnItemElement ProjectTitleElement">
                     Project Title
                 </p>
+
+                <!--Project Summary-->
                 <p class="ProjectFlexColumnItemElement ProjectSummaryElement">
                     Project Summary Of Stuff
                 </p>
-            </div>
-
-            <!--Project Element-->
-            <div class="ProjectFlexColumnContainer ProjectListFlexRowItem">
-                <img src="IndexImages/Default/DefaultProjectImage.png" class="ProjectImage ProjectFlexColumnItemElement">
-                <p class="ProjectFlexColumnItemElement">
-                    Project Title
-                </p>
-                <p class="ProjectFlexColumnItemElement">
-                    Project Summary Of Stuff
-                </p>
-            </div>
-
-            <!--Project Element-->
-            <div class="ProjectFlexColumnContainer ProjectListFlexRowItem">
-                <img src="IndexImages/Default/DefaultProjectImage.png" class="ProjectImage ProjectFlexColumnItemElement">
-                <p class="ProjectFlexColumnItemElement">
-                    Project Title
-                </p>
-                <p class="ProjectFlexColumnItemElement">
-                    Project Summary Of Stuff
-                </p>
-            </div>
+            </a>
 
             <!--To Catagory Search-->
             <button>
                 <img src="IndexImages/SearchForImage.png" title="To Catagory Search">
             </button>
+
+
         </div>
 
+
+        
     </div>
+
+
+
 </body>
 </html>
