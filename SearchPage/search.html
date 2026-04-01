@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+
+    <link rel="stylesheet" href="projectItemDisplay.css">
+    <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="search.css">
+
+    <script defer type="text/javascript" src="../navbar.js"></script>
+    <script defer type="text/javascript" src="../ProjectLibrary.js"></script>
+    <script defer type="text/javascript" src="search.js"></script>
+</head>
+<body>
+    <div id="NavBar" class="NavBarFlexContainer">
+        <button class="FillButton NavBarItemLeft" title="To Profile Page" onclick="ChangeLinkOnClick('https://github.com/TheEmeraldEnd')">
+            <img src="../IndexImages/ProfileTestImage.png"  class="FillArea">
+        </button>
+
+        <button class="FillButton NavBarItemLeft" title="To Home Page" onclick="ChangeLinkOnClick('../index.html')">
+            <img src="../IndexImages/HouseImage.png"  class="FillArea">
+        </button>
+
+        <strong class="FillHeight PortfolioTitle NavBarItemCenter ">Project Search</strong>
+
+        <button class="FillButton NavBarItemRight" title="Search For Projects" onclick="ChangeLinkOnClick('search.html')">
+            <img src="../IndexImages/SearchForImage.png"  class="FillArea">
+        </button>
+    </div>
+
+    <div id="searchBarSection">
+        <input class="searchBarItem" type="text" id="projectSearchBar"></input>
+        <select class="searchBarItem" name="catagoryDropdown" id="catagoryDropdown">
+            <option value="All">All</option>
+        </select>
+        <button class="searchBarItem">
+            <img src="../IndexImages/SearchForImage.png"  class="FillArea">
+        </button>
+    </div>
+    
+    
+    <div id="ProjectHolderElement">
+        <a class="ProjectDisplayItem HiddenDisplayItem" href="../index.html" value="Catagory">
+            <p class="ProjectDisplayTitle" value="Project Title">
+                Project Title
+            </p>
+            <p class="ProjectDisplayCatagory" value="Title">
+                Project Catagory
+            </p>
+        </a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+#ProjectHolderElement{
+    display:flex;
+    flex-direction:column;
+}
+
+.ProjectDisplayItem{
+    width:80%;
+    margin-top:0.25px;
+    margin-bottom:0.25px;
+    align-self:center;
+    color:blue;
+    display:flex;
+    flex-direction:row;
+    padding:0px;
+}
+
+.ProjectDisplayTitle{
+    width:50%;
+    background-color:white;
+    display:inline;
+    align-self: center;
+}
+
+.ProjectDisplayCatagory{
+    width:50%;
+    background-color:lightblue;
+    align-self:center;
+}
+
+.ProjectDisplayItem :hover{
+    background-color:green;
+    color:red;
+}
+
+.HiddenDisplayItem{
+    display:none;
+}

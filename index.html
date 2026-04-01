@@ -10,22 +10,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
 
+    <script defer type="text/javascript" src="navbar.js"></script>
     <script defer type="text/javascript" src="ProjectLibrary.js"></script>
     <script defer type="text/javascript" src="index.js"></script>
 </head>
 <body>
     <div id="NavBar" class="NavBarFlexContainer">
-        <button class="FillButton NavBarItemLeft" title="To Profile Page">
+        <button class="FillButton NavBarItemLeft" title="To Profile Page" onclick="ChangeLinkOnClick('https://github.com/TheEmeraldEnd')">
             <img src="IndexImages/ProfileTestImage.png"  class="FillArea">
         </button>
 
-        <button class="FillButton NavBarItemLeft" title="To Home Page">
+        <button class="FillButton NavBarItemLeft" title="To Home Page" onclick="ChangeLinkOnClick('index.html')">
             <img src="IndexImages/HouseImage.png"  class="FillArea">
         </button>
 
         <strong class="FillHeight PortfolioTitle NavBarItemCenter ">Sage's Portfolio</strong>
 
-        <button class="FillButton NavBarItemRight" title="Search For Projects">
+        <button class="FillButton NavBarItemRight" title="Search For Projects" onclick="ChangeLinkOnClick('SearchPage/search.html')">
             <img src="IndexImages/SearchForImage.png"  class="FillArea">
         </button>
     </div>

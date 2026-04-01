@@ -90,7 +90,6 @@ let uniqueCatagories = ProjectLibraryCollection.GetUniqueCatagories();
 
 for(let i = 0; i < uniqueCatagories.length; i++){
     let projectsInCatagory = ProjectLibraryCollection.GetProjectsOfCatagory(uniqueCatagories[i]);
-    console.log(uniqueCatagories[i])
     let tempProjectElementList = [];
     for(let j = 0; j < projectsInCatagory.length; j++){
         let tempProject = ProjectLibraryCollection.GetProjectDetails(projectsInCatagory[j]);
@@ -113,6 +112,3 @@ for(let i = 0; i < uniqueCatagories.length; i++){
         ProjectCreationFunctions.MakeProjectCatagoryDisplay(
             uniqueCatagories[i], tempProjectElementList, "");
 }
-
-
-

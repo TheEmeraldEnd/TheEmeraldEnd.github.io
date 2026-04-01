@@ -84,6 +84,10 @@ class ProjectLibraryCollection{
         }
         return tempProject;
     }
+
+    static GetProjectLibrary(){
+        return this.ProjectLibrary;
+    }
 }
 
 

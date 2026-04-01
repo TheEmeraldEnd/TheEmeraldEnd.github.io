@@ -1,0 +1,24 @@
+body{
+    background-color:black;
+}
+
+#searchBarSection{
+    margin-top:5px;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.searchBarItem{
+    align-self:center;
+}
+
+#projectSearchBar{
+    width:50%;
+    background-color:greenyellow;
+}
+
+#catagoryDropdown{
+    flex-grow:3;
+    background-color:green;
+}
