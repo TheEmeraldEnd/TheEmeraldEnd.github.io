@@ -1,10 +1,19 @@
 
 //window.location.href = "Static Website Projects/Recipe Project/index.html";
-
+let uniqueCatagories = ProjectLibraryCollection.GetUniqueCatagories();
 let projectListListID = "ProjectListListID";
 
 //Project Display
 let projectListListElement = document.getElementById(projectListListID);
+
+function GoToSearch(incomingCatagory = ""){
+    
+    if (incomingCatagory == "")
+        window.location.href = "SearchPage/search.html"
+    else{
+        window.location.href = `SearchPage/search.html?catagory=${incomingCatagory}`;
+    }
+}
 
 class ProjectCreationFunctions{
     static MakeProjectCatagoryDisplay(incomingProjectCatagoryString, incomingFormattedProjectElements, incomingCatagorySearchLink){
@@ -29,7 +38,7 @@ class ProjectCreationFunctions{
         }
 
         tempElement += 
-            `<button>` + 
+            `<button onclick="GoToSearch('${incomingProjectCatagoryString}')">` + 
             `<img src="IndexImages/SearchForImage.png" title="To ${incomingProjectCatagoryString} Search">` +
             `</button>`
 
@@ -73,7 +82,7 @@ class ProjectCreationFunctions{
     }
 
     static MakeProjectDisplay(incomingProjectTitle, incomingProjectSummary, incomingProjectImageLink, incomingProjectLink){
-        let tempElement = `<a class="ProjectFlexColumnContainer ProjectListFlexRowItem ProjectDisplayWrapper" href="${incomingProjectLink}"` +
+        let tempElement = `<a class="ProjectFlexColumnContainer ProjectListFlexRowItem ProjectDisplayWrapper ProjectDisplayItem" href="${incomingProjectLink}"` +
                 `title="Go To ${incomingProjectTitle}">`;
         tempElement += this.MakeImageElement(incomingProjectImageLink);
         tempElement += this.MakeTitleElement(incomingProjectTitle);
@@ -86,7 +95,7 @@ class ProjectCreationFunctions{
 
 }
 
-let uniqueCatagories = ProjectLibraryCollection.GetUniqueCatagories();
+projectListListElement.innerHTML = "";
 
 for(let i = 0; i < uniqueCatagories.length; i++){
     let projectsInCatagory = ProjectLibraryCollection.GetProjectsOfCatagory(uniqueCatagories[i]);
@@ -108,7 +117,9 @@ for(let i = 0; i < uniqueCatagories.length; i++){
         
     }
 
+    
     projectListListElement.innerHTML += 
         ProjectCreationFunctions.MakeProjectCatagoryDisplay(
             uniqueCatagories[i], tempProjectElementList, "");
 }
+

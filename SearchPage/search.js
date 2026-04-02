@@ -1,4 +1,5 @@
 let catagoryDropDown = document.getElementById("catagoryDropdown");
+let projectSearchBar = document.getElementById("projectSearchBar");
 let projectHolderElement = document.getElementById("ProjectHolderElement");
 let uniqueCatagories = ProjectLibraryCollection.GetUniqueCatagories();
 
@@ -38,12 +39,72 @@ function FilterResultsByCatagoryAndTitle(incomingCatagory = "", incomingTitle = 
             tempProjectElement.classList.add('HiddenDisplayItem');
         }
 
-        if (!(title.toUpperCase().includes(incomingTitle.toUpperCase())) && !(incomingTitle == "")){
+        if (!(title.toUpperCase().includes(incomingTitle.toUpperCase())) && !(incomingTitle === "")){
             tempProjectElement.classList.add('HiddenDisplayItem');
         }
-        console.log(`${title.includes(incomingTitle)}`);
-        
     }
+}
+
+function FillSearchBar(incomingString = ""){
+    projectSearchBar.value = incomingString;
+}
+
+function SetCatagoryDropDown(incomingCatagory = ""){
+    incomingCatagory = incomingCatagory.trim();
+    let defaultChoice = "";
+    let defaultIndex = -1;
+    for(let i = 0; i < catagoryDropDown.options.length; i++){
+        let tempOptionName = catagoryDropDown.options[i].value.trim();
+
+        //Set if specified portion
+        if (tempOptionName.includes(incomingCatagory)){
+            catagoryDropDown.selectedIndex = i;
+            return;
+        }
+        
+        //Check if default
+        if (uniqueCatagories.includes(tempOptionName) ){
+            defaultChoice = tempOptionName;
+            defaultIndex = i;
+        }
+    }
+
+    //Set to default if not chosen
+    catagoryDropDown.selectedIndex = defaultIndex;
+
+
+}
+
+function ApplySearch(){
+    let searchValue = projectSearchBar.value.trim();
+    let catagoryValue = catagoryDropDown.options[catagoryDropDown.selectedIndex].value;
+    if (!uniqueCatagories.includes(catagoryValue)){
+        catagoryValue = "";
+    }
+
+    FilterResultsByCatagoryAndTitle(catagoryValue, searchValue);
+}
+
+function InitializeSearchOnURL(){
+    let URLParamSearchObject = new URLSearchParams(document.location.search);
+    let catagorySearch = URLParamSearchObject.get("catagory");
+    
+    //Safeguard against no catagory search parameter
+    if (catagorySearch == null){
+        SetCatagoryDropDown();
+        FillSearchBar();
+        return;
+    }
+    
+    //Safeguard against non-catagory inputs, default to no catagory
+    if (!(uniqueCatagories.includes(catagorySearch.trim()))){
+        SetCatagoryDropDown();
+        FillSearchBar();
+        return;
+    }
+
+    SetCatagoryDropDown(catagorySearch);
+    FillSearchBar();
 }
 
 //Load catagory options for drop down
@@ -63,4 +124,6 @@ for(let i = 0; i < ProjectLibraryCollection.ProjectLibrary.length; i++){
     }
 }
 
-FilterResultsByCatagoryAndTitle("Game", "Ba")
+//Initialization
+InitializeSearchOnURL();
+ApplySearch();
