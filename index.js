@@ -2,6 +2,7 @@
 //window.location.href = "Static Website Projects/Recipe Project/index.html";
 let uniqueCatagories = ProjectLibraryCollection.GetUniqueCatagories();
 let projectListListID = "ProjectListListID";
+let maxProjectLimitPerCatagory = 3;
 
 //Project Display
 let projectListListElement = document.getElementById(projectListListID);
@@ -100,7 +101,16 @@ projectListListElement.innerHTML = "";
 for(let i = 0; i < uniqueCatagories.length; i++){
     let projectsInCatagory = ProjectLibraryCollection.GetProjectsOfCatagory(uniqueCatagories[i]);
     let tempProjectElementList = [];
-    for(let j = 0; j < projectsInCatagory.length; j++){
+    let projectDisplayLimit = 0;
+
+    if (projectsInCatagory.length < maxProjectLimitPerCatagory){
+        projectDisplayLimit = projectsInCatagory.length;
+    }
+    else{
+        projectDisplayLimit = maxProjectLimitPerCatagory;
+    }
+
+    for(let j = 0; j < projectDisplayLimit; j++){
         let tempProject = ProjectLibraryCollection.GetProjectDetails(projectsInCatagory[j]);
         if (tempProject.Name() == ""){
         }
