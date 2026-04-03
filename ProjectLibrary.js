@@ -93,6 +93,24 @@ class ProjectLibraryCollection{
 
 
 //Game Catagory
+var tempName = "Locomotion-Test ";
+var tempCatagory = "Game";
+var tempDescription = "Testing a basic version of the cyberpunk dash alongside other abilities.";
+var tempSummary = "Testing a basic version of the cyberpunk dash alongside other abilities.";
+var tempLink = "https://github.com/TheEmeraldEnd/Locomotion-Test";
+var tempImageLink = "";
+var tempStatus = "Prototype";
+var tempProjectItem = new ProjectItem(
+    tempName,
+    tempCatagory,
+    tempDescription,
+    tempSummary,
+    tempLink,
+    tempImageLink,
+    tempStatus
+);
+ProjectLibraryCollection.AddProjectItem(tempProjectItem);
+
 var tempName = "Game-Selector";
 var tempCatagory = "Game";
 var tempDescription = "Used to select games and add applications to the selector.";
@@ -136,6 +154,42 @@ var tempSummary = "Testing platforming mechanics.";
 var tempLink = "https://github.com/TheEmeraldEnd/Platformer-Project";
 var tempImageLink = "";
 var tempStatus = "Prototype Only";
+var tempProjectItem = new ProjectItem(
+    tempName,
+    tempCatagory,
+    tempDescription,
+    tempSummary,
+    tempLink,
+    tempImageLink,
+    tempStatus
+);
+ProjectLibraryCollection.AddProjectItem(tempProjectItem);
+
+var tempName = "LXXIX";
+var tempCatagory = "Game";
+var tempDescription = "A quick game about time travel and Pompeii. Built with Twine.";
+var tempSummary = "Game with time travel and Pompeii, a Twine story.";
+var tempLink = "https://github.com/TheEmeraldEnd/LXXIX";
+var tempImageLink = "";
+var tempStatus = "Outdated";
+var tempProjectItem = new ProjectItem(
+    tempName,
+    tempCatagory,
+    tempDescription,
+    tempSummary,
+    tempLink,
+    tempImageLink,
+    tempStatus
+);
+ProjectLibraryCollection.AddProjectItem(tempProjectItem);
+
+var tempName = "School-Project-Gallery";
+var tempCatagory = "Game";
+var tempDescription = "Used in a school video project about life.";
+var tempSummary = "Used in a school video project about life.";
+var tempLink = "https://github.com/TheEmeraldEnd/School-Project-Gallery";
+var tempImageLink = "";
+var tempStatus = "School Project";
 var tempProjectItem = new ProjectItem(
     tempName,
     tempCatagory,
@@ -242,3 +296,91 @@ var tempProjectItem = new ProjectItem(
     tempStatus
 );
 ProjectLibraryCollection.AddProjectItem(tempProjectItem);
+
+//Website
+var tempName = "LegoPiecesWebsite";
+var tempCatagory = "Website";
+var tempDescription = "An original version of what the lego website was going to be. ";
+var tempSummary = "An original version of what the lego website was going to be.";
+var tempLink = "https://github.com/TheEmeraldEnd/LegoPiecesWebsite";
+var tempImageLink = "";
+var tempStatus = "Prototype";
+var tempProjectItem = new ProjectItem(
+    tempName,
+    tempCatagory,
+    tempDescription,
+    tempSummary,
+    tempLink,
+    tempImageLink,
+    tempStatus
+);
+ProjectLibraryCollection.AddProjectItem(tempProjectItem);
+
+//Arduino
+var tempName = "Arduino-Communicator";
+var tempCatagory = "Arduino";
+var tempDescription = "A quick application to communicate between arduino and other applications. Done in c# for accessability.";
+var tempSummary = "A quick application to communicate between arduino and other applications.";
+var tempLink = "https://github.com/TheEmeraldEnd/Arduino-Communicator";
+var tempImageLink = "";
+var tempStatus = "Prototype";
+var tempProjectItem = new ProjectItem(
+    tempName,
+    tempCatagory,
+    tempDescription,
+    tempSummary,
+    tempLink,
+    tempImageLink,
+    tempStatus
+);
+ProjectLibraryCollection.AddProjectItem(tempProjectItem);
+
+//Application
+var tempName = "Productivity-Tracker";
+var tempCatagory = "Application";
+var tempDescription = "An application, built with Unity, to keep track of productivity vs video games.";
+var tempSummary = "A unity application to measure productivity against game time.";
+var tempLink = "https://github.com/TheEmeraldEnd/Productivity-Tracker";
+var tempImageLink = "";
+var tempStatus = "Finished";
+var tempProjectItem = new ProjectItem(
+    tempName,
+    tempCatagory,
+    tempDescription,
+    tempSummary,
+    tempLink,
+    tempImageLink,
+    tempStatus
+);
+ProjectLibraryCollection.AddProjectItem(tempProjectItem);
+
+var tempName = "Steam-Game-Selector";
+var tempCatagory = "Application";
+var tempDescription = "Used to put pathways into one spot. (Steam ends up doing the same thing).";
+var tempSummary = "Used to easily access multiple applications.";
+var tempLink = "https://github.com/TheEmeraldEnd/Steam-Game-Selector";
+var tempImageLink = "";
+var tempStatus = "Finished";
+var tempProjectItem = new ProjectItem(
+    tempName,
+    tempCatagory,
+    tempDescription,
+    tempSummary,
+    tempLink,
+    tempImageLink,
+    tempStatus
+);
+ProjectLibraryCollection.AddProjectItem(tempProjectItem);
+
+
+
+
+
+
+//Unsorted in Catagory
+
+
+
+
+
+
