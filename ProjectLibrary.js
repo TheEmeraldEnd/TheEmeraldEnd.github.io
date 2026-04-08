@@ -316,6 +316,24 @@ var tempProjectItem = new ProjectItem(
 );
 ProjectLibraryCollection.AddProjectItem(tempProjectItem);
 
+var tempName = "JavascriptBotWebInterface";
+var tempCatagory = "Website";
+var tempDescription = "A website meant to corrispond with JavascriptBot. A CYOA type of website.";
+var tempSummary = "A website meant to send commands to JavascriptBot. ";
+var tempLink = "";
+var tempImageLink = "";
+var tempStatus = "Abandoned";
+var tempProjectItem = new ProjectItem(
+    tempName,
+    tempCatagory,
+    tempDescription,
+    tempSummary,
+    tempLink,
+    tempImageLink,
+    tempStatus
+);
+ProjectLibraryCollection.AddProjectItem(tempProjectItem);
+
 //Arduino
 var tempName = "Arduino-Communicator";
 var tempCatagory = "Arduino";
@@ -372,8 +390,24 @@ var tempProjectItem = new ProjectItem(
 );
 ProjectLibraryCollection.AddProjectItem(tempProjectItem);
 
-
-
+//Discord Bot
+var tempName = "JavascriptBot";
+var tempCatagory = "Discord Bot";
+var tempDescription = "A discord bot made to figure out and poke around what is going on.";
+var tempSummary = "A discord bot that is currently only a template.";
+var tempLink = "https://github.com/TheEmeraldEnd/JavascriptBot";
+var tempImageLink = "";
+var tempStatus = "Prototype";
+var tempProjectItem = new ProjectItem(
+    tempName,
+    tempCatagory,
+    tempDescription,
+    tempSummary,
+    tempLink,
+    tempImageLink,
+    tempStatus
+);
+ProjectLibraryCollection.AddProjectItem(tempProjectItem);
 
 
 
