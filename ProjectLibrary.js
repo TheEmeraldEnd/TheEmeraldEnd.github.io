@@ -201,24 +201,24 @@ var tempProjectItem = new ProjectItem(
 );
 ProjectLibraryCollection.AddProjectItem(tempProjectItem);
 
-//AI Catagory
-var tempName = "Wizrobe101Bot";
-var tempCatagory = "AI";
-var tempDescription = "Used to test color identification to see cards.";
-var tempSummary = "Used to test color identification to see cards.";
-var tempLink = "https://github.com/TheEmeraldEnd/Wizrobe101Bot";
-var tempImageLink = "ProjectLibraryImages/Wizrobe101Bot.png";
-var tempStatus = "Unfinished";
-var tempProjectItem = new ProjectItem(
-    tempName,
-    tempCatagory,
-    tempDescription,
-    tempSummary,
-    tempLink,
-    tempImageLink,
-    tempStatus
-);
-ProjectLibraryCollection.AddProjectItem(tempProjectItem);
+// //AI Catagory
+// var tempName = "Wizrobe101Bot";
+// var tempCatagory = "AI";
+// var tempDescription = "Used to test color identification to see cards.";
+// var tempSummary = "Used to test color identification to see cards.";
+// var tempLink = "https://github.com/TheEmeraldEnd/Wizrobe101Bot";
+// var tempImageLink = "ProjectLibraryImages/Wizrobe101Bot.png";
+// var tempStatus = "Unfinished";
+// var tempProjectItem = new ProjectItem(
+//     tempName,
+//     tempCatagory,
+//     tempDescription,
+//     tempSummary,
+//     tempLink,
+//     tempImageLink,
+//     tempStatus
+// );
+// ProjectLibraryCollection.AddProjectItem(tempProjectItem);
 
 //ASP.NET Catagory
 var tempName = "LegoTestSite";
